@@ -1,0 +1,13 @@
+C:\Users\gosha\source\repos\AlgoCasts_Solution\bin\Debug\netcoreapp3.1\AlgoCasts_Solution.exe
+C:\Users\gosha\source\repos\AlgoCasts_Solution\bin\Debug\netcoreapp3.1\AlgoCasts_Solution.deps.json
+C:\Users\gosha\source\repos\AlgoCasts_Solution\bin\Debug\netcoreapp3.1\AlgoCasts_Solution.runtimeconfig.json
+C:\Users\gosha\source\repos\AlgoCasts_Solution\bin\Debug\netcoreapp3.1\AlgoCasts_Solution.runtimeconfig.dev.json
+C:\Users\gosha\source\repos\AlgoCasts_Solution\bin\Debug\netcoreapp3.1\AlgoCasts_Solution.dll
+C:\Users\gosha\source\repos\AlgoCasts_Solution\bin\Debug\netcoreapp3.1\AlgoCasts_Solution.pdb
+C:\Users\gosha\source\repos\AlgoCasts_Solution\obj\Debug\netcoreapp3.1\AlgoCasts_Solution.csprojAssemblyReference.cache
+C:\Users\gosha\source\repos\AlgoCasts_Solution\obj\Debug\netcoreapp3.1\AlgoCasts_Solution.AssemblyInfoInputs.cache
+C:\Users\gosha\source\repos\AlgoCasts_Solution\obj\Debug\netcoreapp3.1\AlgoCasts_Solution.AssemblyInfo.cs
+C:\Users\gosha\source\repos\AlgoCasts_Solution\obj\Debug\netcoreapp3.1\AlgoCasts_Solution.csproj.CoreCompileInputs.cache
+C:\Users\gosha\source\repos\AlgoCasts_Solution\obj\Debug\netcoreapp3.1\AlgoCasts_Solution.dll
+C:\Users\gosha\source\repos\AlgoCasts_Solution\obj\Debug\netcoreapp3.1\AlgoCasts_Solution.pdb
+C:\Users\gosha\source\repos\AlgoCasts_Solution\obj\Debug\netcoreapp3.1\AlgoCasts_Solution.genruntimeconfig.cache
