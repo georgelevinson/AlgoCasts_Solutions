@@ -4,7 +4,10 @@ namespace AlgoCasts_Solution
 {
     static class StringReversal
     {
-
+        static string Reverse(string str)
+        {
+            return str;
+        }
     }
     static class Palindromes
     {
@@ -27,7 +30,7 @@ namespace AlgoCasts_Solution
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
