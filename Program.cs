@@ -4,14 +4,18 @@ namespace AlgoCasts_Solution
 {
     static class StringReversal
     {
-        static string Reverse(string str)
+        public static string ReverseIterative(string str)
         {
-            return str;
+            string rev = "";
+            for (int i = str.Length - 1; i >= 0; i--)
+            {
+                rev += str[i];
+            }
+            return rev;
         }
     }
     static class Palindromes
     {
-
     }
     static class IntegerReversal
     {
@@ -26,11 +30,11 @@ namespace AlgoCasts_Solution
 
     }
 
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
-            
+            Console.WriteLine(StringReversal.ReverseIterative("sck my ass"));
         }
     }
 }
