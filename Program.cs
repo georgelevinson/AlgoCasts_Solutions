@@ -101,6 +101,8 @@ namespace AlgoCasts_Solution
         // --- Examples
         // maxChar("abcccccccd") === "c"
         // maxChar("apple 1231111") === "1"
+        //
+        // No solution for equal amount of char case implemented
 
         public static char FindMaxChars(string str)
         {
