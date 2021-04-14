@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Linq;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -136,33 +137,162 @@ namespace AlgoCasts_Solution
     }
     static class FizzBuzz
     {
+        // --- Directions
+        // Write a program that console logs the numbers
+        // from 1 to n. But for multiples of three print
+        // “fizz” instead of the number and for the multiples
+        // of five print “buzz”. For numbers which are multiples
+        // of both three and five print “fizzbuzz”.
+        // --- Example
+        //   fizzBuzz(5);
+        //   1
+        //   2
+        //   fizz
+        //   4
+        //   buzz
+        public static string Iterative(int length)
+        {
+            var sb = new StringBuilder();
 
+            for (int i = 1; i <= length; i++)
+            {
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    sb.AppendLine("FizzBuzz");
+                }
+                else if (i % 3 == 0)
+                {
+                    sb.AppendLine("Fizz");
+                }
+                else if (i % 5 == 0)
+                {
+                    sb.AppendLine("Buzz");
+                }
+                else
+                {
+                    sb.AppendLine(i.ToString());
+                }
+            }
+
+            return sb.ToString();
+        }
     }
     static class ArrayChunking
     {
+        // --- Directions
+        // Given an array and chunk size, divide the array into many subarrays
+        // where each subarray is of length size
+        // --- Examples
+        // chunk([1, 2, 3, 4], 2) --> [[ 1, 2], [3, 4]]
+        // chunk([1, 2, 3, 4, 5], 2) --> [[ 1, 2], [3, 4], [5]]
+        // chunk([1, 2, 3, 4, 5, 6, 7, 8], 3) --> [[ 1, 2, 3], [4, 5, 6], [7, 8]]
+        // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
+        // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
+        public static Array ChunkArrayWithBoxing(Array sourceArray, int chunkSize)
+        {
+            int nestedArraySize = (int)Math.Ceiling((decimal)sourceArray.Length / (decimal)chunkSize);
+            Array nestedArray = Array.CreateInstance(typeof(Array), nestedArraySize);
+
+            var nestedIndex = 0;
+            var tailLength = sourceArray.Length % chunkSize;
+
+            for (int i = 0; i + chunkSize <= sourceArray.Length; i += chunkSize)
+            {
+                object[] chunk = new object[chunkSize];
+                Array.Copy(sourceArray, i, chunk, 0, chunkSize);
+
+                nestedArray.SetValue(chunk, nestedIndex);
+                nestedIndex++;
+            }
+
+            if (tailLength != 0)
+            {
+                object[] tail = new object[tailLength];
+                Array.Copy(sourceArray, sourceArray.Length - tailLength, tail, 0, tailLength);
+
+                nestedArray.SetValue(tail, nestedIndex);
+            }
+
+            return nestedArray;
+        }
     }
     static class Anagrams
     {
+        // --- Directions
+        // Check to see if two provided strings are anagrams of eachother.
+        // One string is an anagram of another if it uses the same characters
+        // in the same quantity. Only consider characters, not spaces
+        // or punctuation.  Consider capital letters to be the same as lower case
+        // --- Examples
+        //   anagrams('rail safety', 'fairy tales') --> True
+        //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
+        //   anagrams('Hi there', 'Bye there') --> False
+
 
     }
     static class SentenceCapitalization
     {
+        // --- Directions
+        // Write a function that accepts a string.  The function should
+        // capitalize the first letter of each word in the string then
+        // return the capitalized string.
+        // --- Examples
+        //   capitalize('a short sentence') --> 'A Short Sentence'
+        //   capitalize('a lazy fox') --> 'A Lazy Fox'
+        //   capitalize('look, it is working!') --> 'Look, It Is Working!'
+
 
     }
     static class PrintingSteps
     {
+        // --- Directions
+        // Write a function that accepts a positive number N.
+        // The function should console log a step shape
+        // with N levels using the # character.  Make sure the
+        // step has spaces on the right hand side!
+        // --- Examples
+        //   steps(2)
+        //       '# '
+        //       '##'
+        //   steps(3)
+        //       '#  '
+        //       '## '
+        //       '###'
+        //   steps(4)
+        //       '#   '
+        //       '##  '
+        //       '### '
+        //       '####'
+
 
     }
     static class Pyramid
     {
+        // --- Directions
+        // Write a function that accepts a positive number N.
+        // The function should console log a pyramid shape
+        // with N levels using the # character.  Make sure the
+        // pyramid has spaces on both the left *and* right hand sides
+        // --- Examples
+        //   pyramid(1)
+        //       '#'
+        //   pyramid(2)
+        //       ' # '
+        //       '###'
+        //   pyramid(3)
+        //       '  #  '
+        //       ' ### '
+        //       '#####'
+
 
     }
     static class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(MaxChars.FindMaxChars("abbbbcccccdddd")); ;
+            int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
+            Console.WriteLine(ArrayChunking.ChunkArrayWithBoxing(arr, 3).ToString());
         }
     }
 }
